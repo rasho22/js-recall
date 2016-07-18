@@ -1,15 +1,17 @@
 var selectElementsStartingWithA = function(array) {
     function StartingWithA (aFirst){
+
         return aFirst.charAt(0)== "a";
     }
     return array.filter(StartingWithA);
 };
 
 var selectElementsStartingWithVowel = function(array) {
+    
     var voyelle=["a", "i", "o"];
     function StartingWithVowel (voyellefirst){
         var voyelleL=voyellefirst.charAt(0);
-        return voyelle.indexOf(voyelleL) !==-1;
+        return voyelle.indexOf(voyelleL) !=-1;
     }
     return array.filter(StartingWithVowel);
 
@@ -18,7 +20,6 @@ var selectElementsStartingWithVowel = function(array) {
 var removeNullElements = function(array) {
     function NullElements (Element){
         return Element !== null;
-
     }
     return array.filter(NullElements);
 
@@ -40,8 +41,15 @@ var reverseWordsInArray = function(array) {
 };
 
 var everyPossiblePair = function(array) {
+	  for (var i = 0; i < array.length; i++) {
+	  	array[i]
+	  }
+    return [array];
 
-   
+    /*var result = [],
+    for(var i=0; i<array length; i++)
+        result.push(array[i]);
+    return result;*/
 };
 
 var allElementsExceptFirstThree = function(array) {
@@ -59,12 +67,16 @@ var sortByLastLetter = function(array) {
 };
 
 var getFirstHalf = function(string) {
-    return 'Write your method here';
+	for (var i = 0; i < string.length; i++) {
+		i+3;
+		return string [i];
+	}
+  
 }
 
 var makeNegative = function(number) {
         if (number > 0) {
-        return (number * -1);
+        return (number * -1); 
     } else {
         return number;
     }

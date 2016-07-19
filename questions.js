@@ -38,18 +38,9 @@ var reverseWordsInArray = function(array) {
     }
     
     return array.map(WordsInArray);
-};
-
+}
 var everyPossiblePair = function(array) {
-	  for (var i = 0; i < array.length; i++) {
-	  	array[i]
-	  }
-    return [array];
-
-    /*var result = [],
-    for(var i=0; i<array length; i++)
-        result.push(array[i]);
-    return result;*/
+	return array.sort();
 };
 
 var allElementsExceptFirstThree = function(array) {
@@ -63,14 +54,12 @@ var addElementToBeginning = function(array, element) {
 
 var sortByLastLetter = function(array) {
 
-    return array.sort().reverse();
+   return reverseWordsInArray(reverseWordsInArray(array).sort());
 };
 
 var getFirstHalf = function(string) {
-	for (var i = 0; i < string.length; i++) {
-		i+3;
-		return string [i];
-	}
+   
+	return string.substr(0,3);
   
 }
 
@@ -84,23 +73,37 @@ var makeNegative = function(number) {
 }
 
 var numberOfPalindromes = function(array) {
-    return 'Write your method here';
+      var len = array.length;
+    for ( var i = 0; i < Math.floor(len/2); i++ ) {
+        if (array[i] !== array[len - 1 - i]) {
+            return len-3;//à modifier car il est pas bon
+        }
+    }
 }
 
 var shortestWord = function(array) {
-    return 'Write your method here';
+   var shortword = '';
+    for (var i=1; i < array.length; i++)  {
+        if ((array[i-1].length) < (array[i].length)) {
+        shortword=array[i-1];
+        }
+    }
+return shortword;
 }
 
 var longestWord = function(array) {
-   /* for (i = 0; i < array.length; i++) {
-    return array[i];
-    if (i < array.length-1)
-        return array;
-      }*/
-}
+    var longword = '';
+    for (var i= array.length-1; i < array.length; i++)  {
+        if ((array[i-1].length) < (array[i].length)) {
+        longword=array[i-1];
+        }
+    }
+return longword;
+   
+ } 
 
 var sumNumbers = function(array) {
-    return 'Write your method here';
+    return array.concat(array);
 }
 
 var repeatElements = function(array) {
@@ -143,7 +146,7 @@ var swapKeysAndValues = function(object) {
 }
 
 var sumKeysAndValues = function(object) {
-    return 'Write your method here';
+    return ;
 }
 
 var removeCapitals = function(string) {

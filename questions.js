@@ -40,7 +40,16 @@ var reverseWordsInArray = function(array) {
     return array.map(WordsInArray);
 }
 var everyPossiblePair = function(array) {
-	return array.sort();
+	var result=[];
+	for (var i = 0; i < array.length-1; i++) {
+		for (var j = i +1; j < array.length; j++) {
+			var pair=[array[i], array[j]];
+			pair.sort();
+			result.push(pair);
+		}
+	}
+	result.sort();
+	return result;
 };
 
 var allElementsExceptFirstThree = function(array) {
